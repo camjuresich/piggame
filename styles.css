@@ -1,0 +1,76 @@
+body {
+    background-color: #FFBC80;
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    color: #FC4F4F
+}
+
+#player1 {
+    float: left;
+}
+#player2 {
+    float: right;
+}
+
+#player1, #player2 {
+    /*background-color: #FF9F45;*/
+    text-align: center;
+    height: 100vh;
+    width: 14vw;
+}
+.player {
+    background-color: #FF9F45;
+}
+
+#parent {
+    float: center;
+    width: 40%;
+    margin: auto;
+    display: block;
+}
+#container {
+    height: 100vh;
+    position: relative;
+    
+  }
+
+#roll, #hold {
+    top: 40%;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+ #hold {
+    top:44%;
+}
+.btn {
+    border: solid 3px #FC4F4F;
+    border-radius: 12px;
+    background-color: #FF9F45;
+    font-size: 1.2em;
+    color: #FC4F4F
+}
+
+.btn:hover {
+    transition-duration: 300ms;
+    background-color: #FFBC80;
+    border: solid 3px #FF9F45
+}
+
+.player-active {
+    background-color: #FC4F4F;
+    color: white;
+    transition-duration: 500ms;
+}
+
+.winner {
+    background-color: #a3f99e;
+    color: white;
+    transition-duration: 500ms;
+}
+
+.invisible {
+    display: none;
+}
