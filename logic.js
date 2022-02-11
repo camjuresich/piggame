@@ -47,7 +47,7 @@ const roll = function() {
     }
 
 }
-
+/* you're a butt for snoopin lol jk */
 
 const restart = function() {
     // should reset the game to original conditions
