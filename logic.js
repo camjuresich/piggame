@@ -7,10 +7,13 @@ const changeTurn = function(player) {
     document.getElementById(player).innerHTML = currScore;
     document.getElementById('player1').classList.toggle('player-active');
     document.getElementById('player2').classList.toggle('player-active');
+    document.getElementById('roll').disabled = true;
+    setTimeout(() => {document.getElementById('roll').disabled = false}, 1000)
+
 }
 
 const checkWin = function(player) {
-    if (totalScore[player] >= 20) {
+    if (totalScore[player] >= 100) {
         // document.querySelectorAll('.player').classList.remove('player-active');
         // console.log(document.getElementsByClassName('winner')[0]);
         document.getElementsByClassName('player-active')[0].classList.remove('player-active');
@@ -26,6 +29,7 @@ const checkWin = function(player) {
         // change the roll button to a 'play again button'
         // hide the hold button and disable it
         return true;
+
     }
 }
 
@@ -64,6 +68,9 @@ const restart = function() {
     document.getElementById('hold').classList.remove('invisible');
 }
 const hold = function() {
+    if (currScore === 0) {
+        return true;
+    }
     const player = currPlayer + 1;
     totalScore[currPlayer] += currScore;
     currScore = 0;
